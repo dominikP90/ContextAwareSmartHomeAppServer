@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory>
+	    <property name="connection.url">jdbc:mysql://localhost:3306/livesmart?createDatabaseIfNotExist=true</property>
+	    <property name="connection.username">root</property>
+	    <property name="connection.password">root</property>
+	    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+	    <property name="hibernate.show_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+	    
+	    <!-- Mapping classes -->
+	    <mapping class="livesmart.com.dataModel.AlarmDevice"/>
+	    <mapping class="livesmart.com.dataModel.CameraDevice"/>   
+	    <mapping class="livesmart.com.dataModel.Device"/>
+	    <mapping class="livesmart.com.dataModel.DoorDevice"/>
+	    <mapping class="livesmart.com.dataModel.HeatingDevice"/>   
+	    <mapping class="livesmart.com.dataModel.LightningDevice"/>   
+	    <mapping class="livesmart.com.dataModel.MusicDevice"/> 
+	 <!--    <mapping class="livesmart.com.dataModel.Notification"/> -->
+	    <mapping class="livesmart.com.dataModel.Room"/>
+	    <mapping class="livesmart.com.dataModel.StovenDevice"/>
+		<mapping class="livesmart.com.dataModel.User"/>	    
+	    <mapping class="livesmart.com.dataModel.WindowDevice"/>
+	    
+	</session-factory>
+
+</hibernate-configuration>
