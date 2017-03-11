@@ -9,10 +9,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.hibernate.Session;
+
 import livesmart.com.dataAccess.DeviceDAO;
+import livesmart.com.dataAccess.HibernateConnector;
 import livesmart.com.dataAccess.LoginResponse;
+import livesmart.com.dataAccess.SwitchResponse;
 import livesmart.com.dataAccess.UserDAO;
-import livesmart.com.dataModel.Device;
 import livesmart.com.dataModel.User;
 
 /**
@@ -26,9 +29,6 @@ import livesmart.com.dataModel.User;
 @Path("/livesmart")
 public class LiveSmartWebservice implements ILiveSmartWebservice{
 	
-	/**
-	 * Constructor
-	 */
 	public LiveSmartWebservice() {}
 	
 	//TODO always update user.lastupdated -> nn to reload on client side
@@ -74,6 +74,42 @@ public class LiveSmartWebservice implements ILiveSmartWebservice{
 	}
 	
 	/**
+	 * Switches on/off device by deviceID
+	 * @param deviceId
+	 * @return
+	 */
+	@PUT
+	@Path("/device/switch")
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Produces(MediaType.APPLICATION_JSON)
+	public SwitchResponse switchOnOffDeviceById(@FormParam("deviceId") int deviceId, @FormParam("newState") boolean newState) {
+		DeviceDAO deviceDAO = new DeviceDAO();
+		if (deviceDAO.switchDeviceOnOff(deviceId, newState)) {
+			return new SwitchResponse(true, "Successful");
+		} else {
+			return new SwitchResponse(false, "Not updated");
+		}
+	}
+	
+	/**
+	 * Switches on/off device by deviceID
+	 * @param deviceId
+	 * @return
+	 */
+	@PUT
+	@Path("/device/seeker")
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Produces(MediaType.APPLICATION_JSON)
+	public SwitchResponse changeSeekerValueDeviceById(@FormParam("deviceId") int deviceId, @FormParam("newValue") int newValue) {
+		DeviceDAO deviceDAO = new DeviceDAO();
+		if (deviceDAO.changeSeekerValueDeviceById(deviceId, newValue)) {
+			return new SwitchResponse(true, "Successful");
+		} else {
+			return new SwitchResponse(false, "Not updated");
+		}
+	}
+	
+	/**
 	 * Register user's FirebaseAPI-Key for messaging
 	 */
 	@PUT
@@ -91,18 +127,4 @@ public class LiveSmartWebservice implements ILiveSmartWebservice{
 	}
 	
 	
-	/**
-	 * Get device by deviceID
-	 * @param deviceId
-	 * @return
-	 */
-	@GET
-	@Path("/device/{deviceId}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Device getDeviceById(@PathParam("deviceId") int deviceId) {
-		DeviceDAO deviceDAO = new DeviceDAO();
-		Device d = deviceDAO.getDeviceByDeviceId(deviceId);
-	    return d;
-	}
 }
