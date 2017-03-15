@@ -68,7 +68,7 @@ public class UserDAO {
 		try{
 			session = HibernateConnector.getInstance().getSession();
 			Transaction tx = session.beginTransaction();
-			Query query = session.createQuery("UPDATE User set authentificationToken = '" + firebaseKey + "' " +
+			Query query = session.createQuery("UPDATE User u set u.authentificationToken = '" + firebaseKey + "' " +
 											  "WHERE id = " + userId);
 			
 			int result = query.executeUpdate();

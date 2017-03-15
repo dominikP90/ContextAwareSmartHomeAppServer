@@ -11,6 +11,7 @@ import livesmart.com.dataAccess.HibernateConnector;
 import livesmart.com.dataModel.Notification;
 import livesmart.com.dataModel.Severity;
 import livesmart.com.dataModel.StovenDevice;
+import livesmart.com.dataModel.User;
 
 /**
  * @author Dominik Poppek
@@ -41,10 +42,14 @@ public class TestFCMNotification {
 	        n1.setDeviceID(sd.getDeviceID());
 	        n1.getReasons().add("User left home at: " + n1.getTimestamp().getHours() + ":" + n1.getTimestamp().getMinutes());
 	        n1.getReasons().add("Stoven turned on since: " + n1.getTimestamp().getHours() + ":" + n1.getTimestamp().getMinutes());
+	    //Get firebaseToken
+	    Session session2 = HibernateConnector.getInstance().getSession();
+	    User u = session2.get(User.class, 1);
+	    
 	        
 	    //Send Notification
 	    try {
-			fcm.pushFCMNotification("eaIqR6Q4eE0:APA91bHV-Yl1JDm9xA27e0FE6b7v6cM28lGDww1pJuUYHGDAzhVBFzrM1dkikazvWaCLSce0DNMf_uwaYAcf63Qmgq6aUa_3B28ouCnMTueo2f-DjiTg9nbNxx6_97CzdVQJt_GiNmWN", n1);
+			fcm.pushFCMNotification(u.getAuthentificationToken(), n1);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
