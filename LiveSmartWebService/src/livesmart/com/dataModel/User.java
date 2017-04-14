@@ -35,7 +35,6 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch=FetchType.EAGER)
     @Fetch (FetchMode.SELECT)
     private List<Room> rooms = new ArrayList<>();
-
     private String authentificationToken;
     private Timestamp lastUpdate;
     

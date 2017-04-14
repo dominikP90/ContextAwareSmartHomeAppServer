@@ -9,10 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.hibernate.Session;
-
 import livesmart.com.dataAccess.DeviceDAO;
-import livesmart.com.dataAccess.HibernateConnector;
 import livesmart.com.dataAccess.LoginResponse;
 import livesmart.com.dataAccess.SwitchResponse;
 import livesmart.com.dataAccess.UserDAO;

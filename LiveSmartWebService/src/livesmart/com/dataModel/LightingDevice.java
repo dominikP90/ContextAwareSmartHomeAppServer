@@ -8,6 +8,6 @@ import javax.persistence.Entity;
  */
 
 @Entity
-@DiscriminatorValue("lightningdevice") 
-public class LightningDevice extends Device{
+@DiscriminatorValue("lightingdevice") 
+public class LightingDevice extends Device{
 }

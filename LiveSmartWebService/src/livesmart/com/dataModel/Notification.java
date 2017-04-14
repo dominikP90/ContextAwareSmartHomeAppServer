@@ -3,11 +3,20 @@ package livesmart.com.dataModel;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Created by Dominik Poppek on 16.12.2016.
  */
+@Entity
+@Table (name="NOTIFICATION")
 public class Notification {
-
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
     private int notificationID;
     private String notificationText;
     private Date timestamp;

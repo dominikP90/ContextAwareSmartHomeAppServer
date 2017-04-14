@@ -34,6 +34,7 @@ public class Device {
 	 @Enumerated(EnumType.STRING)
 	 private DeviceType deviceType;
 	 private boolean deviceTrunedOn;
+	 private String deviceSeekerName;
 	 private int deviceSeekerValue;
 	 private String roomName;
 	 
@@ -103,6 +104,19 @@ public class Device {
 	}
 	public void setDeviceTrunedOn(boolean deviceTrunedOn) {
 		this.deviceTrunedOn = deviceTrunedOn;
+	}
+	
+	/**
+	 * @return the deviceSeekerName
+	 */
+	public String getDeviceSeekerName() {
+		return deviceSeekerName;
+	}
+	/**
+	 * @param deviceSeekerName the deviceSeekerName to set
+	 */
+	public void setDeviceSeekerName(String deviceSeekerName) {
+		this.deviceSeekerName = deviceSeekerName;
 	}
 	/**
 	 * @return the deviceSeekerValue

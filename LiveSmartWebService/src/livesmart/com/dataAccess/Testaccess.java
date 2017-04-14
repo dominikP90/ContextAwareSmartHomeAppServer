@@ -21,7 +21,7 @@ import livesmart.com.dataModel.Device;
 import livesmart.com.dataModel.DeviceType;
 import livesmart.com.dataModel.DoorDevice;
 import livesmart.com.dataModel.HeatingDevice;
-import livesmart.com.dataModel.LightningDevice;
+import livesmart.com.dataModel.LightingDevice;
 import livesmart.com.dataModel.MusicDevice;
 import livesmart.com.dataModel.Room;
 import livesmart.com.dataModel.StovenDevice;
@@ -178,58 +178,58 @@ public class Testaccess {
 	        h7.setRoomName(toilette.getRoomName());
 	        
 	        //Lightnings
-	        LightningDevice l1 = new LightningDevice();
+	        LightingDevice l1 = new LightingDevice();
 	        l1.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l1.setDeviceName("Bathroom Lightning");
-	        l1.setDeviceType(DeviceType.LIGHTNING);
+	        l1.setDeviceName("Bathroom Lighting");
+	        l1.setDeviceType(DeviceType.LIGHTING);
 	        l1.setRoomName(bathroom.getRoomName());
 	        
-	        LightningDevice l2 = new LightningDevice();
+	        LightingDevice l2 = new LightingDevice();
 	        l2.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l2.setDeviceName("Bedroom Lightning");
-	        l2.setDeviceType(DeviceType.LIGHTNING);
+	        l2.setDeviceName("Bedroom Lighting");
+	        l2.setDeviceType(DeviceType.LIGHTING);
 	        l2.setRoomName(bedroom.getRoomName());
 	        
-	        LightningDevice l3 = new LightningDevice();
+	        LightingDevice l3 = new LightingDevice();
 	        l3.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l3.setDeviceName("Dining room Lightning");
-	        l3.setDeviceType(DeviceType.LIGHTNING);
+	        l3.setDeviceName("Dining room Lighting");
+	        l3.setDeviceType(DeviceType.LIGHTING);
 	        l3.setRoomName(dining.getRoomName());
 	        
-	        LightningDevice l4 = new LightningDevice();
+	        LightingDevice l4 = new LightingDevice();
 	        l4.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l4.setDeviceName("Entrance Lightning");
-	        l4.setDeviceType(DeviceType.LIGHTNING);
+	        l4.setDeviceName("Entrance Lighting");
+	        l4.setDeviceType(DeviceType.LIGHTING);
 	        l4.setRoomName(entrance.getRoomName());
 	        
-	        LightningDevice l5 = new LightningDevice();
+	        LightingDevice l5 = new LightingDevice();
 	        l5.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l5.setDeviceName("Garage Lightning");
-	        l5.setDeviceType(DeviceType.LIGHTNING);
+	        l5.setDeviceName("Garage Lighting");
+	        l5.setDeviceType(DeviceType.LIGHTING);
 	        l5.setRoomName(garage.getRoomName());
 	        
-	        LightningDevice l6 = new LightningDevice();
+	        LightingDevice l6 = new LightingDevice();
 	        l6.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l6.setDeviceName("Kitchen Lightning");
-	        l6.setDeviceType(DeviceType.LIGHTNING);
+	        l6.setDeviceName("Kitchen Lighting");
+	        l6.setDeviceType(DeviceType.LIGHTING);
 	        l6.setRoomName(kitchen.getRoomName());
 
-	        LightningDevice l7 = new LightningDevice();
+	        LightingDevice l7 = new LightingDevice();
 	        l7.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l7.setDeviceName("Library Lightning");
-	        l7.setDeviceType(DeviceType.LIGHTNING);
+	        l7.setDeviceName("Library Lighting");
+	        l7.setDeviceType(DeviceType.LIGHTING);
 	        l7.setRoomName(library.getRoomName());
 	        
-	        LightningDevice l8 = new LightningDevice();
+	        LightingDevice l8 = new LightingDevice();
 	        l8.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l8.setDeviceName("Living room Lightning");
-	        l8.setDeviceType(DeviceType.LIGHTNING);
+	        l8.setDeviceName("Living room Lighting");
+	        l8.setDeviceType(DeviceType.LIGHTING);
 	        l8.setRoomName(livingroom.getRoomName());
 	        
-	        LightningDevice l9 = new LightningDevice();
+	        LightingDevice l9 = new LightingDevice();
 	        l9.setDeviceMAC("00:80:41:ae:fd:7e");
-	        l9.setDeviceName("Toilette Lightning");
-	        l9.setDeviceType(DeviceType.LIGHTNING);
+	        l9.setDeviceName("Toilette Lighting");
+	        l9.setDeviceType(DeviceType.LIGHTING);
 	        l9.setRoomName(toilette.getRoomName());
 	        
 	        //Musics
