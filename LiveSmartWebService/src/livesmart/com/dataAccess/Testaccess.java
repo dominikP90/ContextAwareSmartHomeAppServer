@@ -263,8 +263,6 @@ public class Testaccess {
 	        s1.setDeviceName("Kitchen Stoven");
 	        s1.setDeviceType(DeviceType.STOVEN);
 	        s1.setRoomName(kitchen.getRoomName());
-	        s1.setHotplateTurnedOn(false);
-	        s1.setStoveTurnedOn(false);
 
 	        //Windows
 	        WindowDevice w1 = new WindowDevice();

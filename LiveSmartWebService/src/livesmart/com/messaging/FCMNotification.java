@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jettison.json.JSONObject;
 
+import livesmart.com.dataAccess.HibernateConnector;
 import livesmart.com.dataModel.Notification;
 
 /**

@@ -9,7 +9,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
 
 /**
  * @author Dominik Poppek
@@ -58,6 +57,13 @@ public class HibernateConnector {
     public Session getSession() throws HibernateException {
         Session session = sessionFactory.openSession();
         return session;
+    }
+    
+    /**
+     * Close sessionfactory
+     */
+    public void closeSessionFactory() {
+    	this.sessionFactory.close();
     }
     
 }

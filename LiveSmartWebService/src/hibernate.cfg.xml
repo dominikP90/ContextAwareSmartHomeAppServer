@@ -19,6 +19,7 @@
 	    <mapping class="livesmart.com.dataModel.Device"/>
 	    <mapping class="livesmart.com.dataModel.DoorDevice"/>
 	    <mapping class="livesmart.com.dataModel.HeatingDevice"/>   
+	     <mapping class="livesmart.com.dataModel.HumidityDevice"/>   
 	    <mapping class="livesmart.com.dataModel.LightingDevice"/>   
 	    <mapping class="livesmart.com.dataModel.MusicDevice"/> 
 	 	<mapping class="livesmart.com.dataModel.Notification"/>
